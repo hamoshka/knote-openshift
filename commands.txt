@@ -1,0 +1,17 @@
+docker build -t knote-java .
+
+docker tag knote-java hamoshka/knote-java:2.0.0
+
+docker push hamoshka/knote-java:2.0.0
+
+docker network create knote
+
+docker ps
+
+kubectl apply -f kube
+
+kubectl scale --replicas=2 deployment/knote
+
+kubectl explain deployment
+
+
